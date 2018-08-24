@@ -1,5 +1,13 @@
 # API Project: URL Shortener Microservice for freeCodeCamp
 
+## usega
+this repo need to setup .env with variables
+MONGO_URI=[yourmongodb address]
+e.g. 
+```
+MONGO_URI="mongodb://[username]:[password]@mongodb.mlab.com:25602/windo-mongodb"
+```
+
 
 ### User Stories
 

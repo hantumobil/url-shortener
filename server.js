@@ -1,20 +1,16 @@
 'use strict';
-
+require('dotenv').config();
 var express = require('express');
-var mongo = require('mongodb');
-var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var api = require('./api');
-
 var cors = require('cors');
-
 var app = express();
 
 // Basic Configuration 
 var port = process.env.PORT || 3000;
 
 /** this project needs a db !! **/ 
-mongoose.connect(process.env.MONGO_URI);
+// added in ./model.js
 
 app.use(cors());
 
@@ -28,7 +24,7 @@ app.get('/', function(req, res){
 });
 
 // your first API endpoint... 
-app.use("/api", api);
+app.use('/api', api);
 
 app.listen(port, function () {
   console.log('Node.js listening ...');
